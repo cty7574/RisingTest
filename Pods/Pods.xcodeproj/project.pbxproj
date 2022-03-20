@@ -84,7 +84,7 @@
 		8E2F5B02EB7FA5D5E7DA63CC76025BCB /* PagingMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingMenuView.swift; path = Sources/PagingMenuView.swift; sourceTree = "<group>"; };
 		9341924FD577D9FC184DA321C142D9C8 /* Pods-RisingTestTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RisingTestTests-umbrella.h"; sourceTree = "<group>"; };
 		9885F6FEA522D916220550047ECDEB87 /* Pods-RisingTestTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RisingTestTests-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0E1844ABE8E2C7DA50E01184FA80261 /* PagingKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PagingKit.debug.xcconfig; sourceTree = "<group>"; };
 		A2AC6FF85DBB2B26A6C9321125301C76 /* Pods-RisingTest-RisingTestUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RisingTest-RisingTestUITests-Info.plist"; sourceTree = "<group>"; };
 		A4A1E4E34B06EF056B78FC617E1D31B0 /* Pods-RisingTest-RisingTestUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RisingTest-RisingTestUITests-umbrella.h"; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		C43F75FF02E76D71C32A08C3BB258E94 /* UnderlineFocusView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnderlineFocusView.swift; path = "Sources/Menu Cells/Underline/UnderlineFocusView.swift"; sourceTree = "<group>"; };
 		C444F9D2E3EE48AD63181009D3A187B3 /* PagingKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PagingKit.modulemap; sourceTree = "<group>"; };
 		C7FC4D5702D76C6FFDCE6FB5A34E2CDA /* PagingKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PagingKit-Info.plist"; sourceTree = "<group>"; };
-		CD26BE284B3457124829CB4C4FCE8AD6 /* PagingKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PagingKit; path = PagingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD26BE284B3457124829CB4C4FCE8AD6 /* PagingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PagingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B351BD75907210755697E1ACDB5C50 /* PagingKitProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingKitProxy.swift; path = Sources/PagingKitProxy.swift; sourceTree = "<group>"; };
 		D97144E9A45DDECD83B2D31741269ED1 /* Pods-RisingTest-RisingTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RisingTest-RisingTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EBB8F8B4EB4769078EDA6442B5858D02 /* OverlayMenuCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OverlayMenuCell.swift; path = "Sources/Menu Cells/Overlay/OverlayMenuCell.swift"; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 		6D53C4555474DD2805CD5C33D304FE47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD26BE284B3457124829CB4C4FCE8AD6 /* PagingKit */,
+				CD26BE284B3457124829CB4C4FCE8AD6 /* PagingKit.framework */,
 				34C7F37EFEB881234920C4A56014960C /* Pods-RisingTest */,
 				AEDF2C2FB42F28EC07B3F6D2D7643F9D /* Pods-RisingTest-RisingTestUITests */,
 				F289621C4DB9B048EED7D6ECC9BF3C0F /* Pods-RisingTestTests */,
@@ -263,7 +263,6 @@
 				C43F75FF02E76D71C32A08C3BB258E94 /* UnderlineFocusView.swift */,
 				3CD279A7372379B74939FC7EAF74849C /* Support Files */,
 			);
-			name = PagingKit;
 			path = PagingKit;
 			sourceTree = "<group>";
 		};
@@ -378,7 +377,7 @@
 			);
 			name = PagingKit;
 			productName = PagingKit;
-			productReference = CD26BE284B3457124829CB4C4FCE8AD6 /* PagingKit */;
+			productReference = CD26BE284B3457124829CB4C4FCE8AD6 /* PagingKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C0BDBE43C9218716BC701FCC23FFC731 /* Pods-RisingTest-RisingTestUITests */ = {
@@ -407,7 +406,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -581,7 +580,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/PagingKit/PagingKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/PagingKit/PagingKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -720,7 +719,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/PagingKit/PagingKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/PagingKit/PagingKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

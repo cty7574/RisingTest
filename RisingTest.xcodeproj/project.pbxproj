@@ -20,6 +20,7 @@
 		B94350A527E5F1CF0079BE3D /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94350A427E5F1CF0079BE3D /* MenuCell.swift */; };
 		B94350A727E5F1FF0079BE3D /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94350A627E5F1FF0079BE3D /* MenuCell.xib */; };
 		B94350A927E5F3590079BE3D /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94350A827E5F3590079BE3D /* FocusView.xib */; };
+		B9F8744F27E752730013545F /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9F8744E27E752730013545F /* Sign.storyboard */; };
 		D5F9F4C9937B75E6E3E00170 /* Pods_RisingTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC40CB844C26CE59EDF5500C /* Pods_RisingTest.framework */; };
 		DFF21846EC52881004F8F650 /* Pods_RisingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FD459FB72E9ABACB27413D /* Pods_RisingTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		B94350A427E5F1CF0079BE3D /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		B94350A627E5F1FF0079BE3D /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		B94350A827E5F3590079BE3D /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
+		B9F8744E27E752730013545F /* Sign.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		CFFDBD07CDF36946960C4888 /* Pods-RisingTest-RisingTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingTest-RisingTestUITests.release.xcconfig"; path = "Target Support Files/Pods-RisingTest-RisingTestUITests/Pods-RisingTest-RisingTestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC40CB844C26CE59EDF5500C /* Pods_RisingTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RisingTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0ABF0524A5710B3E44AD604 /* Pods-RisingTest-RisingTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingTest-RisingTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-RisingTest-RisingTestUITests/Pods-RisingTest-RisingTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				B943507827E5E66F0079BE3D /* ViewController.swift */,
 				B94350A827E5F3590079BE3D /* FocusView.xib */,
 				B943507A27E5E66F0079BE3D /* Main.storyboard */,
+				B9F8744E27E752730013545F /* Sign.storyboard */,
 				B94350A427E5F1CF0079BE3D /* MenuCell.swift */,
 				B94350A627E5F1FF0079BE3D /* MenuCell.xib */,
 				B943507D27E5E6700079BE3D /* Assets.xcassets */,
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B943508127E5E6700079BE3D /* LaunchScreen.storyboard in Resources */,
+				B9F8744F27E752730013545F /* Sign.storyboard in Resources */,
 				B943507E27E5E6700079BE3D /* Assets.xcassets in Resources */,
 				B94350A727E5F1FF0079BE3D /* MenuCell.xib in Resources */,
 				B94350A927E5F3590079BE3D /* FocusView.xib in Resources */,

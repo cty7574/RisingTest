@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         } else if let vc = segue.destination as? PagingContentViewController{
             contentViewController = vc
             contentViewController.dataSource = self
+            contentViewController.delegate = self
         }
     }
 }
@@ -72,5 +73,11 @@ extension ViewController: PagingContentViewControllerDataSource {
     
     func contentViewController(viewController: PagingContentViewController, viewControllerAt index: Int) -> UIViewController {
         return dataSource[index].vc
+    }
+}
+
+extension ViewController: PagingContentViewControllerDelegate {
+    func contentViewController(viewController: PagingContentViewController, didManualScrollOn index: Int, percent: CGFloat) {
+        menuViewcontroller.scroll(index: index, percent: percent, animated: false)
     }
 }
