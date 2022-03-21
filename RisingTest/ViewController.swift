@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         menuViewcontroller.reloadData()
         contentViewController.reloadData()
         
+        //
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
