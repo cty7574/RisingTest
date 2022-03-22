@@ -12,7 +12,10 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let backBarButtonItem = UIBarButtonItem(title: "로그인", style: .plain, target: self, action: nil)
+        self.navigationItem.title = "마이컬리"
+        self.navigationItem.titleView?.tintColor = .white
+        
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backBarButtonItem.tintColor = .black
         self.navigationItem.backBarButtonItem = backBarButtonItem
         // Do any additional setup after loading the view.

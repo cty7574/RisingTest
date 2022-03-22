@@ -16,9 +16,11 @@ class LoginViewController: UIViewController {
         signBtn.layer.borderWidth = 1
         signBtn.layer.borderColor = UIColor.systemPurple.cgColor
         
-        let backBarButtonItem = UIBarButtonItem(title: "회원가입", style: .plain, target: self, action: nil)
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backBarButtonItem.tintColor = .black
         self.navigationItem.backBarButtonItem = backBarButtonItem
+        
+        self.navigationItem.title = "로그인"
     }
     @IBAction func btnSignup(_ sender: UIButton) {
         guard let svc = self.storyboard?.instantiateViewController(withIdentifier: "SignupVC") else { return }
