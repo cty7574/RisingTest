@@ -1037,7 +1037,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="CcO-G7-FwO"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-1c-gSH">
                                                 <rect key="frame" x="10" y="176" width="82" height="18"/>
@@ -1057,7 +1057,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="EAn-Z4-2cW"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-OM-UjT">
                                                 <rect key="frame" x="10" y="259" width="26" height="18"/>
@@ -1117,7 +1117,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="Q54-Qp-54A"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nms-oe-nsu">
                                                 <rect key="frame" x="10" y="508" width="26" height="18"/>
@@ -1345,10 +1345,11 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="fIs-RA-PpY"/>
+                                                            <constraint firstAttribute="height" constant="30" id="mF0-az-DpQ"/>
                                                         </constraints>
                                                         <color key="tintColor" systemColor="systemGrayColor"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Button" image="checkmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="clickMale:" destination="qod-g9-pXU" eventType="touchUpInside" id="1OL-V6-4ay"/>
                                                             <action selector="clickedAll:" destination="qod-g9-pXU" eventType="touchUpInside" id="cSI-RF-Syc"/>
@@ -1397,6 +1398,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="clickMale:" destination="qod-g9-pXU" eventType="touchUpInside" id="Ovq-8o-Ubq"/>
+                                                            <action selector="clickedBtn1:" destination="qod-g9-pXU" eventType="touchUpInside" id="Dod-Zb-bxi"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이용약관 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scz-Hn-sA1">
@@ -1445,6 +1447,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="clickMale:" destination="qod-g9-pXU" eventType="touchUpInside" id="pBa-r9-ZjV"/>
+                                                            <action selector="clickedBtn2:" destination="qod-g9-pXU" eventType="touchUpInside" id="36X-Hn-I6N"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집,이용 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0L-Ap-zr7">
@@ -1493,6 +1496,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="clickMale:" destination="qod-g9-pXU" eventType="touchUpInside" id="A85-hy-QTL"/>
+                                                            <action selector="clickedBtn3:" destination="qod-g9-pXU" eventType="touchUpInside" id="7U0-RO-GOq"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집,이용 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9O-p0-GpL">
@@ -1541,6 +1545,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="clickMale:" destination="qod-g9-pXU" eventType="touchUpInside" id="kRH-Z4-yxJ"/>
+                                                            <action selector="clickedBtn4:" destination="qod-g9-pXU" eventType="touchUpInside" id="mIU-5J-fh3"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무료배송, 할인쿠폰 등 혜택/정보 수신 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gya-fD-trU">
@@ -1581,6 +1586,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="clickMale:" destination="qod-g9-pXU" eventType="touchUpInside" id="rOF-yA-rA6"/>
+                                                            <action selector="clickedSms:" destination="qod-g9-pXU" eventType="touchUpInside" id="JXK-bU-uUT"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XJ-pu-xxm">
@@ -1599,6 +1605,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="clickMale:" destination="qod-g9-pXU" eventType="touchUpInside" id="mzR-ZC-eVd"/>
+                                                            <action selector="clickedEmail:" destination="qod-g9-pXU" eventType="touchUpInside" id="Yol-HI-vKy"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0t-Qd-zXB">
@@ -1634,6 +1641,7 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark.circle" catalog="system"/>
                                                         <connections>
                                                             <action selector="clickMale:" destination="qod-g9-pXU" eventType="touchUpInside" id="n3d-A6-7i6"/>
+                                                            <action selector="clickedBtnAge:" destination="qod-g9-pXU" eventType="touchUpInside" id="UkE-RO-12f"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="본인은 만 14세 이상입니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhv-YD-THl">
@@ -1683,6 +1691,9 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="submitButtonTapped:" destination="qod-g9-pXU" eventType="touchUpInside" id="cTR-Aw-sX2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1821,6 +1832,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="1400"/>
                     <connections>
+                        <outlet property="adressTextField" destination="oXh-KA-PTn" id="8Sa-x6-lL2"/>
                         <outlet property="birthView" destination="XKZ-h0-bLR" id="x1B-ab-djO"/>
                         <outlet property="btnAge" destination="276-qB-mFp" id="3DW-Bc-jPg"/>
                         <outlet property="btnAgree1" destination="OCs-St-QrX" id="a95-ZT-KOO"/>
@@ -1833,9 +1845,18 @@
                         <outlet property="btnMale" destination="NzV-SB-5BF" id="M1Q-MR-aqk"/>
                         <outlet property="btnNone" destination="l4d-Ro-ck8" id="OLD-8D-BTS"/>
                         <outlet property="btnSms" destination="dkg-X7-zdV" id="2hm-hv-lM9"/>
+                        <outlet property="dateTextField" destination="xWG-IP-nn4" id="SQO-78-RXK"/>
                         <outlet property="dateView" destination="xWG-IP-nn4" id="2Bu-kb-XBZ"/>
                         <outlet property="duplCheck" destination="wHr-uS-oVM" id="1ok-e3-PA9"/>
+                        <outlet property="emailTextField" destination="Kci-rr-ukA" id="vhZ-NZ-fqt"/>
+                        <outlet property="idTextField" destination="NdO-gP-TDI" id="sgn-4A-ebt"/>
+                        <outlet property="monthTextField" destination="nsW-Ti-1vJ" id="Oow-g2-1qI"/>
                         <outlet property="monthView" destination="nsW-Ti-1vJ" id="2w6-Qx-hhj"/>
+                        <outlet property="nameTextField" destination="iYR-9K-eyc" id="lLr-k6-Dxg"/>
+                        <outlet property="passwordTextField" destination="GCU-X8-axb" id="xva-E5-vhG"/>
+                        <outlet property="passwordTextField2" destination="8aC-Ry-Ymg" id="7XL-Pt-C8V"/>
+                        <outlet property="phoneTextField" destination="tIg-9P-B70" id="t1I-w1-hYN"/>
+                        <outlet property="yearTextField" destination="nsW-Ti-1vJ" id="YJw-Dk-ky9"/>
                         <outlet property="yearView" destination="BIE-rN-5gx" id="vdW-bp-b0s"/>
                     </connections>
                 </viewController>
