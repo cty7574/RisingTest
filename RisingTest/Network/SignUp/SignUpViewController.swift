@@ -190,8 +190,9 @@ class SignUpViewController: UIViewController {
 }
 
 extension SignUpViewController {
-    func didSuccessSignUp(_ userIdx: Int) {
-        self.presentAlert(title: "회원가입을 성공하였습니다. userID: ",message: String(userIdx))
+    func didSuccessSignUp(_ message: String) {
+        self.presentAlert(title: "회원가입을 성공하였습니다. message: ",message: message)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func failedToRequest(message: String) {

@@ -20,6 +20,10 @@
 		B94350A527E5F1CF0079BE3D /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94350A427E5F1CF0079BE3D /* MenuCell.swift */; };
 		B94350A727E5F1FF0079BE3D /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94350A627E5F1FF0079BE3D /* MenuCell.xib */; };
 		B94350A927E5F3590079BE3D /* FocusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B94350A827E5F3590079BE3D /* FocusView.xib */; };
+		B96E70F927EF40F400E0EA8F /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E70F827EF40F400E0EA8F /* LoginDataManager.swift */; };
+		B96E70FD27EF524F00E0EA8F /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E70FC27EF524F00E0EA8F /* UserResponse.swift */; };
+		B96E70FF27EF525600E0EA8F /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E70FE27EF525600E0EA8F /* UserRequest.swift */; };
+		B96E710127EF53C800E0EA8F /* UserInfoDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96E710027EF53C800E0EA8F /* UserInfoDataManager.swift */; };
 		B99F814027ED7C08002EC5E5 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F813F27ED7C08002EC5E5 /* SignUpResponse.swift */; };
 		B99F814227ED7C17002EC5E5 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F814127ED7C17002EC5E5 /* SignUpRequest.swift */; };
 		B99F814527ED93B4002EC5E5 /* LogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F814427ED93B4002EC5E5 /* LogInRequest.swift */; };
@@ -76,6 +80,10 @@
 		B94350A427E5F1CF0079BE3D /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		B94350A627E5F1FF0079BE3D /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		B94350A827E5F3590079BE3D /* FocusView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FocusView.xib; sourceTree = "<group>"; };
+		B96E70F827EF40F400E0EA8F /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		B96E70FC27EF524F00E0EA8F /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		B96E70FE27EF525600E0EA8F /* UserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRequest.swift; sourceTree = "<group>"; };
+		B96E710027EF53C800E0EA8F /* UserInfoDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoDataManager.swift; sourceTree = "<group>"; };
 		B99F813F27ED7C08002EC5E5 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		B99F814127ED7C17002EC5E5 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		B99F814427ED93B4002EC5E5 /* LogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRequest.swift; sourceTree = "<group>"; };
@@ -166,8 +174,6 @@
 				B943507427E5E66F0079BE3D /* AppDelegate.swift */,
 				B943507627E5E66F0079BE3D /* SceneDelegate.swift */,
 				B943507827E5E66F0079BE3D /* ViewController.swift */,
-				B9CE018A27E88AB100D9671A /* MyPageViewController.swift */,
-				B9CE018627E88A9A00D9671A /* LoginViewController.swift */,
 				B94350A827E5F3590079BE3D /* FocusView.xib */,
 				B943507A27E5E66F0079BE3D /* Main.storyboard */,
 				B94350A427E5F1CF0079BE3D /* MenuCell.swift */,
@@ -196,11 +202,31 @@
 			path = RisingTestUITests;
 			sourceTree = "<group>";
 		};
+		B96E70FA27EF521700E0EA8F /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				B9CE018A27E88AB100D9671A /* MyPageViewController.swift */,
+				B96E710027EF53C800E0EA8F /* UserInfoDataManager.swift */,
+				B96E70FB27EF522E00E0EA8F /* Entity */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		B96E70FB27EF522E00E0EA8F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B96E70FE27EF525600E0EA8F /* UserRequest.swift */,
+				B96E70FC27EF524F00E0EA8F /* UserResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B99F813C27ED7BEB002EC5E5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				B99F813D27ED7BF3002EC5E5 /* SignUp */,
 				B99F814327ED939B002EC5E5 /* LogIn */,
+				B96E70FA27EF521700E0EA8F /* UserInfo */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -227,6 +253,8 @@
 		B99F814327ED939B002EC5E5 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				B9CE018627E88A9A00D9671A /* LoginViewController.swift */,
+				B96E70F827EF40F400E0EA8F /* LoginDataManager.swift */,
 				B99F814827ED93C8002EC5E5 /* Entity */,
 			);
 			path = LogIn;
@@ -517,10 +545,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96E710127EF53C800E0EA8F /* UserInfoDataManager.swift in Sources */,
 				B99F814727ED93C1002EC5E5 /* LogInResponse.swift in Sources */,
 				B9CE018927E88AA300D9671A /* SignUpViewController.swift in Sources */,
 				B943507927E5E66F0079BE3D /* ViewController.swift in Sources */,
 				B9CE018B27E88AB100D9671A /* MyPageViewController.swift in Sources */,
+				B96E70FF27EF525600E0EA8F /* UserRequest.swift in Sources */,
 				B99F815227ED9EF3002EC5E5 /* UIColor.swift in Sources */,
 				B943507527E5E66F0079BE3D /* AppDelegate.swift in Sources */,
 				B99F814027ED7C08002EC5E5 /* SignUpResponse.swift in Sources */,
@@ -532,7 +562,9 @@
 				B99F814527ED93B4002EC5E5 /* LogInRequest.swift in Sources */,
 				B99F815427EDA2BA002EC5E5 /* SignUpDataManager.swift in Sources */,
 				B9CE018727E88A9A00D9671A /* LoginViewController.swift in Sources */,
+				B96E70F927EF40F400E0EA8F /* LoginDataManager.swift in Sources */,
 				B943507727E5E66F0079BE3D /* SceneDelegate.swift in Sources */,
+				B96E70FD27EF524F00E0EA8F /* UserResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

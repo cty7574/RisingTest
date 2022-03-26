@@ -9,9 +9,5 @@ struct SignUpResponse: Decodable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: SignupResult
 }
 
-struct SignupResult: Decodable{
-    var userIdx: Int
-}

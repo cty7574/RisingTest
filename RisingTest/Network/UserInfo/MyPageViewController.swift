@@ -9,16 +9,27 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
+    @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var userInfoView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.navigationItem.title = "마이컬리"
-        self.navigationItem.titleView?.tintColor = .white
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backBarButtonItem.tintColor = .black
         self.navigationItem.backBarButtonItem = backBarButtonItem
         // Do any additional setup after loading the view.
+        
+        if ViewController.jwt == nil{
+            loginView.isHidden = false
+            userInfoView.isHidden = true
+        }
+        else{
+            loginView.isHidden = true
+            userInfoView.isHidden = false
+        }
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {

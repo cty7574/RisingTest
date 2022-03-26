@@ -16,7 +16,7 @@ class SignUpDataManager {
                 case .success(let response):
                     // 성공했을 때
                     if response.isSuccess {
-                        delegate.didSuccessSignUp(response.result.userIdx)
+                        delegate.didSuccessSignUp(response.message)
                     }
                     // 실패했을 때
                     else {
@@ -39,6 +39,7 @@ class SignUpDataManager {
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
+                    debugPrint(error)
                     delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
                     
                 }

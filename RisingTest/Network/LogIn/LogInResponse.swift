@@ -14,4 +14,5 @@ struct LogInResponse: Decodable{
 
 struct LoginResult: Decodable{
     var jwt: String
+    var userIdx: Int
 }
