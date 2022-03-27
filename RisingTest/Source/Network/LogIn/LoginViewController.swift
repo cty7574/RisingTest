@@ -19,10 +19,12 @@ class LoginViewController: UIViewController {
         signBtn.layer.borderWidth = 1
         signBtn.layer.borderColor = UIColor.systemPurple.cgColor
         
+        // 백버튼 색상 변경
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backBarButtonItem.tintColor = .black
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
+        // 네비게이션 title
         self.navigationItem.title = "로그인"
     }
     @IBAction func btnSignup(_ sender: UIButton) {
@@ -50,9 +52,12 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     func didSuccessLogIn(_ token: String,_ userIdx: Int) {
         ViewController.jwt = token
-        self.navigationController?.popViewController(animated: true)
+        ViewController.userIdx = userIdx
+        
         print("Login Success! jwt: ", ViewController.jwt!)
         print("userIdx: ", userIdx)
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     func failedToRequest(message: String) {

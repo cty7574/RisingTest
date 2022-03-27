@@ -143,6 +143,7 @@ class SignUpViewController: UIViewController {
         }
         if password != password2 {
             self.presentAlert(title: "동일한 비밀번호를 입력해주세요")
+            return
         }
         guard let name = nameTextField.text, name.isExists else{
             self.presentAlert(title: "이름을 입력해주세요")

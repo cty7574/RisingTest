@@ -9,11 +9,11 @@ struct UserResponse: Decodable{
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: [result]
+    var result: [UserResult]
 }
 
-struct result: Decodable{
-    var id: String
+struct UserResult: Decodable{
+    var user_id: String
     var name: String
     var email: String
     var phone: String

@@ -19,6 +19,8 @@ class ViewController: UIViewController {
      }
      var dataSource = [(menuTitle: "컬리추천", vc: viewController(.red)), (menuTitle: "신상품", vc: viewController(.blue)), (menuTitle: "베스트", vc: viewController(.yellow))]
     static var jwt: String? = nil
+    static var userIdx: Int = 0
+    static var userInfo : UserResponse? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()

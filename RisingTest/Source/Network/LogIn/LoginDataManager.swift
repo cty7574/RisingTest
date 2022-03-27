@@ -11,9 +11,10 @@ class LoginDataManager{
     func postLogIn(_ parameters: LogInRequest, delegate: LoginViewController) {
         AF.request("https://dev.sosocamp.shop/users/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
-            .responseDecodable(of: LogInResponse.self) {
-                response in
+            .responseDecodable(of: LogInResponse.self) { response in
+                
                 switch response.result {
+                    
                 case .success(let response):
                     if response.isSuccess {
                         delegate.didSuccessLogIn(response.result.jwt, response.result.userIdx)
