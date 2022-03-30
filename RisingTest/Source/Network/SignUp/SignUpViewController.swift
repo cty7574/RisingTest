@@ -129,6 +129,8 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
+        
+        
         guard let id = idTextField.text, id.isExists else{
             self.presentAlert(title: "아이디를 입력해주세요")
             return
@@ -174,17 +176,19 @@ class SignUpViewController: UIViewController {
             return
         }
         let birthday = year + "-" + month + "-" + date
-        
+
         if btnCheck[1] != true || btnCheck[2] != true || btnCheck[7] != true{
             self.presentAlert(title: "약관에 동의해주세요")
             return
         }
-        
+
         let input = SignUpRequest(id: id, password: password, name: name, email: email, phone: phone, address: address, birthday: birthday, gender: gender)
-        
+
         print(input)
         
         dataManager.postSignUp(input, delegate: self)
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
     
@@ -193,7 +197,6 @@ class SignUpViewController: UIViewController {
 extension SignUpViewController {
     func didSuccessSignUp(_ message: String) {
         self.presentAlert(title: "회원가입을 성공하였습니다. message: ",message: message)
-        self.navigationController?.popViewController(animated: true)
     }
     
     func failedToRequest(message: String) {

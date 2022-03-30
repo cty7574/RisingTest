@@ -15,9 +15,8 @@ class MyPageViewController: UIViewController {
     lazy var dataManager = UserInfoDataManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationItem.title = "마이컬리"
-        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        //self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backBarButtonItem.tintColor = .black

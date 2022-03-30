@@ -10,7 +10,7 @@ import PagingKit
 
 class ViewController: UIViewController {
     
-    var menuViewcontroller: PagingMenuViewController!
+    var menuViewController: PagingMenuViewController!
     var contentViewController: PagingContentViewController!
 
     static var jwt: String? = nil
@@ -19,13 +19,13 @@ class ViewController: UIViewController {
     
     var dataSource = [(menu: String, content: UIViewController)]() {
         didSet{
-            menuViewcontroller.reloadData()
+            menuViewController.reloadData()
             contentViewController.reloadData()
         }
     }
     
-    lazy var firstLoad: (() -> Void)? = { [weak self, menuViewcontroller, contentViewController] in
-        menuViewcontroller?.reloadData()
+    lazy var firstLoad: (() -> Void)? = { [weak self, menuViewController, contentViewController] in
+        menuViewController?.reloadData()
         contentViewController?.reloadData()
     }
 
@@ -35,19 +35,30 @@ class ViewController: UIViewController {
         //
         //
         
-        menuViewcontroller.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
-        menuViewcontroller.registerFocusView(nib: UINib(nibName: "FocusView", bundle: nil))
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backBarButtonItem.tintColor = .black
+        self.navigationItem.backBarButtonItem = backBarButtonItem
+        
+        menuViewController.register(nib: UINib(nibName: "MenuCell", bundle: nil), forCellWithReuseIdentifier: "MenuCell")
+        menuViewController.registerFocusView(nib: UINib(nibName: "FocusView", bundle: nil))
         
         firstLoad?()
         dataSource = makeDataSource()
         
     }
     
+    @IBAction func cartBtnTabbed(_ sender: UIButton) {
+        guard let cvc = self.storyboard?.instantiateViewController(withIdentifier: "CartVC") as? CartViewController else { return }
+        
+        self.navigationController?.pushViewController(cvc, animated: true)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if let vc = segue.destination as? PagingMenuViewController{
-            menuViewcontroller = vc
-            menuViewcontroller.dataSource = self
-            menuViewcontroller.delegate = self
+            menuViewController = vc
+            menuViewController.dataSource = self
+            menuViewController.delegate = self
         } else if let vc = segue.destination as? PagingContentViewController{
             contentViewController = vc
             contentViewController.dataSource = self
@@ -113,7 +124,7 @@ extension ViewController: PagingContentViewControllerDataSource {
 
 extension ViewController: PagingContentViewControllerDelegate {
     func contentViewController(viewController: PagingContentViewController, didManualScrollOn index: Int, percent: CGFloat) {
-        menuViewcontroller.scroll(index: index, percent: percent, animated: false)
+        menuViewController.scroll(index: index, percent: percent, animated: false)
     }
 }
 //

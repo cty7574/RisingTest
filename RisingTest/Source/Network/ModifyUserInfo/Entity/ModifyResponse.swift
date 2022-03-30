@@ -13,5 +13,5 @@ struct ModifyResponse: Decodable{
 }
 
 struct result: Decodable{
-    var userIdx: String
+    var userIdx: Int
 }

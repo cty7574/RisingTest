@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
         
         // 네비게이션 title
         self.navigationItem.title = "로그인"
-    }
+        }
     @IBAction func btnSignup(_ sender: UIButton) {
         guard let svc = self.storyboard?.instantiateViewController(withIdentifier: "SignupVC") else { return }
         
@@ -58,6 +58,7 @@ extension LoginViewController {
         print("userIdx: ", userIdx)
         
         self.navigationController?.popViewController(animated: true)
+        //popToRootViewController(animated: <#T##Bool#>)
     }
     
     func failedToRequest(message: String) {

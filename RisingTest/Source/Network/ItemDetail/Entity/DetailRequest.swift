@@ -10,9 +10,9 @@ import Alamofire
 
 class DetailRequest {
     
-    func getDetailData() {
+    func getDetailData(_ postID: Int) {
         
-        let url = "https://dev.sosocamp.shop/items?postID=\(1)"
+        let url = "https://dev.sosocamp.shop/items?postID=\(postID)"
         
         // HTTP Method: GET
         AF.request(url,

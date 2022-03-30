@@ -27,6 +27,7 @@ class ModifyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "개인정보 수정"
 
         birthView.layer.cornerRadius = 5
         birthView.layer.borderColor = UIColor.systemGray5.cgColor
@@ -121,13 +122,18 @@ class ModifyViewController: UIViewController {
         
         print(input)
         dataManager.patchUserInfo(input, delegate: self)
+        
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
 extension ModifyViewController {
     func didSuccessModify(_ message: String) {
         self.presentAlert(title: "회원 정보 수정: ",message: message)
-        self.navigationController?.popViewController(animated: true)
+//        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "MyPageVC") else { return }
+//        self.changeRootViewController(rvc)
+        
+    
     }
     
     func failedToRequest(message: String) {

@@ -1,13 +1,13 @@
 //
-//  SearchViewController.swift
+//  AskViewController.swift
 //  RisingTest
 //
-//  Created by 맨태 on 2022/03/27.
+//  Created by 맨태 on 2022/03/30.
 //
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class AskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

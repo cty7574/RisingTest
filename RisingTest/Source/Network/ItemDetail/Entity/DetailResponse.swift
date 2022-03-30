@@ -15,6 +15,6 @@ struct DetailResponse: Decodable{
 struct DetailResult: Decodable{
     var name: String
     var price: Int
-    var gift_enable: Bool
+    var gift_enable: Int
     var image: String
 }

@@ -17,6 +17,7 @@ class CheckViewController: UIViewController {
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backBarButtonItem.tintColor = .black
         self.navigationItem.backBarButtonItem = backBarButtonItem
+        self.title = "개인정보 수정"
         
         idTextField.text = ViewController.userInfo!.result[0].user_id
     }

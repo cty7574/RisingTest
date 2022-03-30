@@ -15,7 +15,8 @@ class RandomCollectionViewCell: UICollectionViewCell{
     
     override func awakeFromNib() {
         itemIdLabel.isHidden = true
-        cartBtn.layer.cornerRadius = 25
+        cartBtn.layer.cornerRadius = 20
+        cartBtn.layer.opacity = 0.7
     }
     
     
