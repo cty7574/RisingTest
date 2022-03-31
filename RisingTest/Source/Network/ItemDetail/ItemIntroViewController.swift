@@ -13,6 +13,7 @@ class ItemIntroViewController: UIViewController {
     @IBOutlet weak var itemNameLabel: UILabel!
     @IBOutlet weak var itemIntroLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
+    @IBOutlet weak var vendorLabel: UILabel!
     var randomItem: RandomResult? = nil
     var saleItem: SaleResult? = nil
     override func viewDidLoad() {
@@ -33,6 +34,7 @@ class ItemIntroViewController: UIViewController {
         itemIntroLabel.text = input.intro
         itemPriceLabel.text = String(input.title_price) + "원"
         mainImage.load(URL(string: input.image)!)
+        vendorLabel.text = "[" + input.vendor + "]"
     }
     
     func insertSaleData(_ input: SaleResult){
@@ -40,6 +42,7 @@ class ItemIntroViewController: UIViewController {
         itemIntroLabel.text = input.intro
         itemPriceLabel.text = String(Int((1-(Float(input.off)/100)) * Float(input.title_price))) + "원"
         mainImage.load(URL(string: input.image)!)
+        vendorLabel.text = "[" + input.vendor + "]"
     }
 
     @IBAction func orderBtnTabbed(_ sender: UIButton) {

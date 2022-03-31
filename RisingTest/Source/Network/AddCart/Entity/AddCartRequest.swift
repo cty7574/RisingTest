@@ -6,10 +6,10 @@
 //
 
 struct AddCartRequest: Encodable{
-    var item_list: [AddCardList]
+    var item_list: [AddCartList]
 }
 
-struct AddCardList: Encodable{
+struct AddCartList: Encodable{
     var id: Int
     var quantity: Int
 }

@@ -64,7 +64,7 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             
             let target = randomItems!.result[indexPath.item]
             
-            cell.itemNameLabel.text = target.title
+            cell.itemNameLabel.text = "[" + target.vendor + "] " + target.title
             cell.itemPriceLabel.text = target.title_price.description + "원"
             cell.cellImage.load(URL(string: target.image)!)
             cell.itemIdLabel.text = String(target.post_id)
@@ -77,7 +77,7 @@ extension RecommendViewController: UICollectionViewDataSource, UICollectionViewD
             
             let target = saleItems!.result[indexPath.item]
             
-            cell.itemNameLabel.text = target.title
+            cell.itemNameLabel.text = "[" + target.vendor + "] " + target.title
             cell.originalPriceLabel.text = target.title_price.description + "원"
             cell.cellImage.load(URL(string: target.image)!)
             cell.itemIdLabel.text = String(target.post_id)

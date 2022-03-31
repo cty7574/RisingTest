@@ -38,8 +38,9 @@ class LoginDataManager{
                 case .failure(let error):
                     print(error.localizedDescription)
                     debugPrint(error)
-                    delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                    delegate.failedToRequest(message: "로그인 실패!")
                 }
+            
             }
     }
 }

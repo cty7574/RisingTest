@@ -28,6 +28,10 @@ class ModifyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "개인정보 수정"
+        
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backBarButtonItem.tintColor = .black
+        self.navigationItem.backBarButtonItem = backBarButtonItem
 
         birthView.layer.cornerRadius = 5
         birthView.layer.borderColor = UIColor.systemGray5.cgColor
@@ -124,6 +128,13 @@ class ModifyViewController: UIViewController {
         dataManager.patchUserInfo(input, delegate: self)
         
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func deleteBtnTabbed(_ sender: UIButton) {
+        guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "DeleteUserVC") as? DeleteUserViewController else { return }
+        
+        self.navigationController?.pushViewController(dvc, animated: true)
     }
 }
 
