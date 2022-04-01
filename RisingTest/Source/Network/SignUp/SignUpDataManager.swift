@@ -9,7 +9,7 @@ import Alamofire
 
 class SignUpDataManager {
     func postSignUp(_ parameters: SignUpRequest, delegate: SignUpViewController) {
-        AF.request("https://dev.sosocamp.shop/users", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+        AF.request("https://prod.sosocamp.shop/users", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: SignUpResponse.self) { response in
                 

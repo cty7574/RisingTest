@@ -19,10 +19,12 @@ class CartCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var cancleBtn: UIButton!
     @IBOutlet weak var quantityView: UIView!
+    @IBOutlet weak var basketIdLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         indexLabel.isHidden = true
+        basketIdLabel.isHidden = true
         quantityView.layer.borderWidth = 1
         quantityView.layer.borderColor = UIColor.systemGray4.cgColor
         quantityView.layer.cornerRadius = 5

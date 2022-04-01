@@ -10,7 +10,7 @@ import Alamofire
 
 class SearchRequest{
     func getSearchItem(_ parameters: String){
-        let url = "https://dev.sosocamp.shop/search?searchText=\(parameters)"
+        let url = "https://prod.sosocamp.shop/search?searchText=\(parameters)"
         
         AF.request(url,
                    method: .get,

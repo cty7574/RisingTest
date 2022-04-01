@@ -15,7 +15,7 @@ class MDRequest {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         
-        let url = "https://dev.sosocamp.shop/recommend-items/\(1)?createDate=\(formatter.string(from: Date()))"
+        let url = "https://prod.sosocamp.shop/recommend-items/\(1)?createDate=\(formatter.string(from: Date()))"
         
         // HTTP Method: GET
         AF.request(url,

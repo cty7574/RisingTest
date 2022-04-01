@@ -9,7 +9,7 @@ import Alamofire
 
 class DeleteCartRequest{
     func deleteCartData(_ itemId: Int, delegate: CartViewController){
-        let url = "https://dev.sosocamp.shop/baskets/\(itemId)"
+        let url = "https://prod.sosocamp.shop/baskets/\(itemId)"
         let headers: HTTPHeaders = ["x-access-token" : ViewController.jwt!]
 
         

@@ -56,6 +56,10 @@ extension ReviewViewController: UICollectionViewDelegate, UICollectionViewDataSo
         if reviewList == nil{
             return 0
         }
+        
+        if reviewList!.count < 3{
+            return reviewList!.count
+        }
         else{
             return 3
         }

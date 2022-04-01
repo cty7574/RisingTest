@@ -11,7 +11,7 @@ class DeleteUserRequest{
     func putDeleteUserData(delegate: DeleteUserViewController){
         let headers : HTTPHeaders = ["x-access-token" : ViewController.jwt!]
         
-        AF.request("https://dev.sosocamp.shop/users/\(ViewController.userIdx)",
+        AF.request("https://prod.sosocamp.shop/users/\(ViewController.userIdx)",
                    method: .put,
                    parameters: nil,
                    headers: headers)

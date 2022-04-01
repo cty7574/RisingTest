@@ -9,7 +9,7 @@ import Alamofire
 
 class LoginDataManager{
     func postLogIn(_ parameters: LogInRequest, delegate: LoginViewController) {
-        AF.request("https://dev.sosocamp.shop/users/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
+        AF.request("https://prod.sosocamp.shop/users/login", method: .post, parameters: parameters, encoder: JSONParameterEncoder(), headers: nil)
             .validate()
             .responseDecodable(of: LogInResponse.self) { response in
                 

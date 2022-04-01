@@ -12,9 +12,10 @@ class AddCartDataManager{
         let headers : HTTPHeaders = ["x-access-token" : ViewController.jwt!]
         let params = ["item_list": items]
         
-        AF.request("https://dev.sosocamp.shop/baskets",
+        AF.request("https://prod.sosocamp.shop/baskets",
                    method: .post,
                    parameters: params,
+                   encoder: JSONParameterEncoder(),
                    headers: headers)
             .validate()
             .responseDecodable(of: AddCartResponse.self) {
@@ -29,6 +30,7 @@ class AddCartDataManager{
                     print(error.localizedDescription)
                     debugPrint(error)
                     delegate.failedToRequest(message: "서버와의 연결이 원활하지 않습니다")
+                    print(items)
                 }
             
             }

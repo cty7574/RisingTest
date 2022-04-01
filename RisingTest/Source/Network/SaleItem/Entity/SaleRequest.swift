@@ -15,8 +15,7 @@ class SaleRequest {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         
-        let url = "https://dev.sosocamp.shop/deal-items?createDate=\(formatter.string(from: Date()))"
-        //let url = "https://dev.sosocamp.shop/deal-items?createDate=2022-03-29"
+        let url = "https://prod.sosocamp.shop/deal-items?createDate=\(formatter.string(from: Date()))"
         // HTTP Method: GET
         AF.request(url,
                    method: .get,

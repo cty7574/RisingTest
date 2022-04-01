@@ -11,7 +11,7 @@ class UserInfoDataManager{
     func getUserInfo(delegate: MyPageViewController){
         let headers : HTTPHeaders = ["x-access-token" : ViewController.jwt!]
         
-        AF.request("https://dev.sosocamp.shop/users/\(ViewController.userIdx)",
+        AF.request("https://prod.sosocamp.shop/users/\(ViewController.userIdx)",
                    method: .get,
                    parameters: nil,
                    headers: headers)

@@ -9,7 +9,7 @@ import Alamofire
 
 class GetCartRequest {
     func getCartData(delegate: CartViewController){
-        let url = "https://dev.sosocamp.shop/baskets"
+        let url = "https://prod.sosocamp.shop/baskets"
         let headers: HTTPHeaders = ["x-access-token" : ViewController.jwt!]
         
         AF.request(url,

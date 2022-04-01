@@ -11,7 +11,7 @@ class ModifyDataManage{
     func patchUserInfo(_ parameters: ModifyRequest, delegate: ModifyViewController){
         let headers : HTTPHeaders = ["x-access-token" : ViewController.jwt!]
         
-        AF.request("https://dev.sosocamp.shop/users/\(ViewController.userIdx)", method: .patch,
+        AF.request("https://prod.sosocamp.shop/users/\(ViewController.userIdx)", method: .patch,
         parameters: parameters,
                    encoder: JSONParameterEncoder(),
                    headers: headers)

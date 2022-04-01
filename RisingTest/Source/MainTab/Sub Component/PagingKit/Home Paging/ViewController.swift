@@ -48,9 +48,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cartBtnTabbed(_ sender: UIButton) {
-        guard let cvc = self.storyboard?.instantiateViewController(withIdentifier: "CartVC") as? CartViewController else { return }
-        
-        self.navigationController?.pushViewController(cvc, animated: true)
+        if ViewController.jwt == nil{
+            self.presentAlert(title: "로그인 후 이용해주세요.")
+        }
+        else{
+            guard let cvc = self.storyboard?.instantiateViewController(withIdentifier: "CartVC") as? CartViewController else { return }
+            
+            self.navigationController?.pushViewController(cvc, animated: true)
+        }
     }
     
     
@@ -67,7 +72,7 @@ class ViewController: UIViewController {
     }
     
     fileprivate func makeDataSource() -> [(menu: String, content: UIViewController)]{
-        let myMenuArray = ["컬리추천", "신상품", "베스트"]
+        let myMenuArray = ["컬리추천", "신상품", "베스트" , "알뜰쇼핑", "특가/혜택"]
         
         return myMenuArray.map{
             let title = $0
@@ -82,8 +87,14 @@ class ViewController: UIViewController {
             case "베스트":
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "BestVC") as! BestViewController
                 return (menu: title, content: vc)
+            case "알뜰쇼핑":
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SmartVC") as! SmartViewController
+                return (menu: title, content: vc)
+            case "특가/혜택":
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SaleVC") as! SaleViewController
+                return (menu: title, content: vc)
             default:
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "RecommendVC") as! RecommendViewController
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewVC") as! NewViewController
                 return (menu: title, content: vc)
             }
         }
@@ -96,7 +107,7 @@ extension ViewController: PagingMenuViewControllerDataSource {
     }
     
     func menuViewController(viewController: PagingMenuViewController, widthForItemAt index: Int) -> CGFloat {
-        return 100
+        return 75
     }
     
     func menuViewController(viewController: PagingMenuViewController, cellForItemAt index: Int) -> PagingMenuViewCell {

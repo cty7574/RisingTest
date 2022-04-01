@@ -12,7 +12,7 @@ class DetailRequest {
     
     func getDetailData(_ postID: Int) {
         
-        let url = "https://dev.sosocamp.shop/items?postID=\(postID)"
+        let url = "https://prod.sosocamp.shop/items?postID=\(postID)"
         
         // HTTP Method: GET
         AF.request(url,

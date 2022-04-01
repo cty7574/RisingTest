@@ -9,7 +9,7 @@ import Alamofire
 
 class GetReviewRequest{
     func getReviewData(_ parameters: Int, delegate: ReviewViewController){
-        let url = "https://dev.sosocamp.shop/reviews?postId=\(parameters)"
+        let url = "https://prod.sosocamp.shop/reviews?postId=\(parameters)"
         
         AF.request(url,
                    method: .get,

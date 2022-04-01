@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class CartViewController: UIViewController {
 
     @IBOutlet weak var cartCV: UICollectionView!
@@ -16,10 +18,20 @@ class CartViewController: UIViewController {
     var cartItems: [GetCartResult] = []
     var checkBuy: [Bool] = []
     var removeIndex: Int? = nil
+    var dataManager = UpdateCartManager()
+    static var sum = 0
+    static var basketList: [Int] = []
+    static var itemName: String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "장바구니"
+        
+        let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        backBarButtonItem.tintColor = .black
+        self.navigationItem.backBarButtonItem = backBarButtonItem
         
         addressLabel.text = "배송지를 입력해주세요"
         sendLabel.text = ""
@@ -36,7 +48,32 @@ class CartViewController: UIViewController {
         cr.getCartData(delegate: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let cr = GetCartRequest()
+        cr.getCartData(delegate: self)
+        cartCV.reloadData()
+    }
+    
     @IBAction func orderBtnTabbed(_ sender: UIButton) {
+        if CartViewController.sum != 0{
+            var index = 0
+            
+            for check in checkBuy{
+                if check{
+                    CartViewController.basketList.append(cartItems[index].basket_id)
+                    CartViewController.itemName = cartItems[index].item_name
+                }
+                index += 1
+            }
+            
+            guard let ovc = self.storyboard?.instantiateViewController(withIdentifier: "AddOrderVC") as? AddOrderViewController else { return }
+            
+            self.navigationController?.pushViewController(ovc, animated: true)
+        }
+        else{
+            self.presentAlert(title: "상품을 담고 주문해주세요.")
+            return
+        }
     }
 }
 
@@ -84,6 +121,7 @@ extension CartViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.salePriceLabel.text = String(Int((1-(Float(target.off)/100)) * Float(target.item_price * target.quantity))) + "원"
         cell.quantityLabel.text = String(target.quantity)
         cell.itemImageView.load(URL(string: target.image)!)
+        cell.basketIdLabel.text = String(target.basket_id)
         
         cell.checkBtn.addTarget(self, action: #selector(checkBtnTabbed), for: .touchUpInside)
         cell.cancleBtn.addTarget(self, action: #selector(cancleBtnTabbed), for: .touchUpInside)
@@ -95,15 +133,40 @@ extension CartViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     @objc func checkBtnTabbed(sender: UIButton){
         let index = sender.tag - 200
+        let target = cartItems[index]
+        let price = (Int((1-(Float(target.off)/100)) * Float(target.item_price * target.quantity)))
         
         if sender.tintColor == UIColor.systemPurple{
             sender.tintColor = UIColor.systemGray
             checkBuy[index] = false
+            CartViewController.sum -= price
+            let str = String(CartViewController.sum) + "원 주문"
+            
+            if CartViewController.sum == 0{
+                orderButton.backgroundColor = UIColor.systemGray
+                orderButton.titleLabel!.text = "상품을 담아주세요"
+            }
+            else{
+                orderButton.backgroundColor = UIColor.systemPurple
+                orderButton.titleLabel!.text = str
+                print(str)
+            }
+            
+
+            
         }
         else{
             sender.tintColor = UIColor.systemPurple
             checkBuy[index] = true
+            CartViewController.sum += price
+            let str = String(CartViewController.sum) + "원 주문"
+            
+            orderButton.backgroundColor = UIColor.systemPurple
+            orderButton.titleLabel!.text = str
+            print(str)
+
         }
+        
     }
     
     @objc func minusBtnTabbed(sender: UIButton){
@@ -118,8 +181,17 @@ extension CartViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.quantityLabel.text = String(quantity)
             cell.originalPriceLabel.text = String(target.item_price * quantity) + "원"
             cell.salePriceLabel.text = String(Int((1-(Float(target.off)/100)) * Float(target.item_price * quantity))) + "원"
-            
             cartItems[index].quantity = quantity
+            
+            let input = UpdateCartRequest(quantity: cartItems[index].quantity)
+            dataManager.patchUpdateCartData(input, cartItems[index].item_id, delegate: self)
+            
+            if cell.checkBtn.tintColor == UIColor.systemPurple{
+                let sale = (Int((1-(Float(target.off)/100)) * Float(target.item_price)))
+                CartViewController.sum -= sale
+                orderButton.titleLabel!.text = String(CartViewController.sum) + "원 주문"
+            }
+            
         }
     }
     
@@ -133,8 +205,18 @@ extension CartViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.quantityLabel.text = String(quantity)
         cell.originalPriceLabel.text = String(target.item_price * quantity) + "원"
         cell.salePriceLabel.text = String(Int((1-(Float(target.off)/100)) * Float(target.item_price * quantity))) + "원"
-        
         cartItems[index].quantity = quantity
+        
+        let input = UpdateCartRequest(quantity: cartItems[index].quantity)
+        dataManager.patchUpdateCartData(input, cartItems[index].item_id, delegate: self)
+        
+        
+        if cell.checkBtn.tintColor == UIColor.systemPurple{
+            let sale = (Int((1-(Float(target.off)/100)) * Float(target.item_price)))
+            CartViewController.sum += sale
+            orderButton.titleLabel!.text = String(CartViewController.sum) + "원 주문"
+        }
+        
     }
     
     @objc func cancleBtnTabbed(sender: UIButton){

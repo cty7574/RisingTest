@@ -52,6 +52,11 @@ class MyPageViewController: UIViewController {
         
     }
 
+    @IBAction func orderButtonTabbed(_ sender: UIButton) {
+        guard let gvc = self.storyboard?.instantiateViewController(withIdentifier: "GetOrderVC") as? GetOrderViewController else { return }
+        
+        self.navigationController?.pushViewController(gvc, animated: true)
+    }
 }
 
 extension MyPageViewController{
