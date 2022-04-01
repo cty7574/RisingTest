@@ -96,6 +96,7 @@ class ViewController: UIViewController {
             default:
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewVC") as! NewViewController
                 return (menu: title, content: vc)
+                ////
             }
         }
     }
