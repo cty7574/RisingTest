@@ -47,6 +47,10 @@ class ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     @IBAction func cartBtnTabbed(_ sender: UIButton) {
         if ViewController.jwt == nil{
             self.presentAlert(title: "로그인 후 이용해주세요.")

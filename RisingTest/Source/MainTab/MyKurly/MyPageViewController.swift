@@ -16,7 +16,6 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "마이컬리"
-        //self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backBarButtonItem.tintColor = .black
@@ -26,6 +25,9 @@ class MyPageViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
+        
         if ViewController.jwt != nil && ViewController.userIdx != 0{
             loginView.isHidden = true
             userInfoView.isHidden = false
@@ -36,6 +38,11 @@ class MyPageViewController: UIViewController {
             loginView.isHidden = false
             userInfoView.isHidden = true
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
@@ -57,6 +64,13 @@ class MyPageViewController: UIViewController {
         
         self.navigationController?.pushViewController(gvc, animated: true)
     }
+    
+    @IBAction func wishButtonTabbed(_ sender: UIButton) {
+        guard let wvc = self.storyboard?.instantiateViewController(withIdentifier: "WishListVC") as? WishListViewController else { return }
+        
+        self.navigationController?.pushViewController(wvc, animated: true)
+    }
+    
 }
 
 extension MyPageViewController{

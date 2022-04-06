@@ -32,7 +32,9 @@ class ModifyViewController: UIViewController {
         let backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         backBarButtonItem.tintColor = .black
         self.navigationItem.backBarButtonItem = backBarButtonItem
-
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        
         birthView.layer.cornerRadius = 5
         birthView.layer.borderColor = UIColor.systemGray5.cgColor
         birthView.layer.borderWidth = 1

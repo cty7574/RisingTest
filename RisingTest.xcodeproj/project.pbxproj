@@ -27,6 +27,19 @@
 		B909DC6827F041A700306CB1 /* ModifyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909DC6727F041A700306CB1 /* ModifyDataManager.swift */; };
 		B909DC6A27F041BC00306CB1 /* ModifyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909DC6927F041BC00306CB1 /* ModifyRequest.swift */; };
 		B909DC6C27F041C600306CB1 /* ModifyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B909DC6B27F041C600306CB1 /* ModifyResponse.swift */; };
+		B9277E9727FD32FC0076D79F /* AddWishRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277E9627FD32FC0076D79F /* AddWishRequest.swift */; };
+		B9277E9927FD33050076D79F /* AddWishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277E9827FD33050076D79F /* AddWishResponse.swift */; };
+		B9277E9C27FD331D0076D79F /* GetWishRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277E9B27FD331D0076D79F /* GetWishRequest.swift */; };
+		B9277E9E27FD33240076D79F /* GetWishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277E9D27FD33240076D79F /* GetWishResponse.swift */; };
+		B9277EA227FD346D0076D79F /* DeleteWishRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EA127FD346D0076D79F /* DeleteWishRequest.swift */; };
+		B9277EA427FD34740076D79F /* DeleteWishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EA327FD34740076D79F /* DeleteWishResponse.swift */; };
+		B9277EA627FD4F4F0076D79F /* WishListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EA527FD4F4F0076D79F /* WishListCollectionViewCell.swift */; };
+		B9277EA827FD50BE0076D79F /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EA727FD50BE0076D79F /* WishListViewController.swift */; };
+		B9277EAA27FD584D0076D79F /* AddWishDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EA927FD584D0076D79F /* AddWishDataManager.swift */; };
+		B9277EAE27FD98B80076D79F /* AddReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EAD27FD98B80076D79F /* AddReviewRequest.swift */; };
+		B9277EB027FD98C00076D79F /* AddReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EAF27FD98C00076D79F /* AddReviewResponse.swift */; };
+		B9277EB227FD99240076D79F /* AddReviewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EB127FD99240076D79F /* AddReviewDataManager.swift */; };
+		B9277EB427FD995E0076D79F /* AddReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9277EB327FD995E0076D79F /* AddReviewViewController.swift */; };
 		B943507527E5E66F0079BE3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943507427E5E66F0079BE3D /* AppDelegate.swift */; };
 		B943507727E5E66F0079BE3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943507627E5E66F0079BE3D /* SceneDelegate.swift */; };
 		B943507927E5E66F0079BE3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B943507827E5E66F0079BE3D /* ViewController.swift */; };
@@ -145,6 +158,19 @@
 		B909DC6727F041A700306CB1 /* ModifyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyDataManager.swift; sourceTree = "<group>"; };
 		B909DC6927F041BC00306CB1 /* ModifyRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyRequest.swift; sourceTree = "<group>"; };
 		B909DC6B27F041C600306CB1 /* ModifyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyResponse.swift; sourceTree = "<group>"; };
+		B9277E9627FD32FC0076D79F /* AddWishRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWishRequest.swift; sourceTree = "<group>"; };
+		B9277E9827FD33050076D79F /* AddWishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWishResponse.swift; sourceTree = "<group>"; };
+		B9277E9B27FD331D0076D79F /* GetWishRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWishRequest.swift; sourceTree = "<group>"; };
+		B9277E9D27FD33240076D79F /* GetWishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWishResponse.swift; sourceTree = "<group>"; };
+		B9277EA127FD346D0076D79F /* DeleteWishRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteWishRequest.swift; sourceTree = "<group>"; };
+		B9277EA327FD34740076D79F /* DeleteWishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteWishResponse.swift; sourceTree = "<group>"; };
+		B9277EA527FD4F4F0076D79F /* WishListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9277EA727FD50BE0076D79F /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		B9277EA927FD584D0076D79F /* AddWishDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWishDataManager.swift; sourceTree = "<group>"; };
+		B9277EAD27FD98B80076D79F /* AddReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewRequest.swift; sourceTree = "<group>"; };
+		B9277EAF27FD98C00076D79F /* AddReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewResponse.swift; sourceTree = "<group>"; };
+		B9277EB127FD99240076D79F /* AddReviewDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewDataManager.swift; sourceTree = "<group>"; };
+		B9277EB327FD995E0076D79F /* AddReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewViewController.swift; sourceTree = "<group>"; };
 		B943507127E5E66F0079BE3D /* RisingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RisingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B943507427E5E66F0079BE3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B943507627E5E66F0079BE3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -382,6 +408,78 @@
 			path = MainTab;
 			sourceTree = "<group>";
 		};
+		B9277E9327FD32570076D79F /* AddWish */ = {
+			isa = PBXGroup;
+			children = (
+				B9277EA927FD584D0076D79F /* AddWishDataManager.swift */,
+				B9277E9527FD329D0076D79F /* Entity */,
+			);
+			path = AddWish;
+			sourceTree = "<group>";
+		};
+		B9277E9427FD32590076D79F /* GetWish */ = {
+			isa = PBXGroup;
+			children = (
+				B9277EA727FD50BE0076D79F /* WishListViewController.swift */,
+				B9277E9A27FD33120076D79F /* Entity */,
+			);
+			path = GetWish;
+			sourceTree = "<group>";
+		};
+		B9277E9527FD329D0076D79F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B9277E9627FD32FC0076D79F /* AddWishRequest.swift */,
+				B9277E9827FD33050076D79F /* AddWishResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B9277E9A27FD33120076D79F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B9277E9B27FD331D0076D79F /* GetWishRequest.swift */,
+				B9277E9D27FD33240076D79F /* GetWishResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B9277E9F27FD338B0076D79F /* DeleteWish */ = {
+			isa = PBXGroup;
+			children = (
+				B9277EA027FD339D0076D79F /* Entity */,
+			);
+			path = DeleteWish;
+			sourceTree = "<group>";
+		};
+		B9277EA027FD339D0076D79F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B9277EA127FD346D0076D79F /* DeleteWishRequest.swift */,
+				B9277EA327FD34740076D79F /* DeleteWishResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B9277EAB27FD989E0076D79F /* AddReview */ = {
+			isa = PBXGroup;
+			children = (
+				B9277EB327FD995E0076D79F /* AddReviewViewController.swift */,
+				B9277EB127FD99240076D79F /* AddReviewDataManager.swift */,
+				B9277EAC27FD98AE0076D79F /* Entity */,
+			);
+			path = AddReview;
+			sourceTree = "<group>";
+		};
+		B9277EAC27FD98AE0076D79F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B9277EAD27FD98B80076D79F /* AddReviewRequest.swift */,
+				B9277EAF27FD98C00076D79F /* AddReviewResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		B943506827E5E66F0079BE3D = {
 			isa = PBXGroup;
 			children = (
@@ -493,9 +591,13 @@
 				B9FBD25527F48BE800A4A895 /* GetCart */,
 				B9B0785D27F60DE2003E130D /* UpdateCart */,
 				B9B0785727F5BBE9003E130D /* DeleteCart */,
+				B9277EAB27FD989E0076D79F /* AddReview */,
 				B9FBD26527F4F5A200A4A895 /* GetReview */,
 				B9B0786B27F64500003E130D /* AddOrder */,
 				B9B0786C27F6450D003E130D /* GetOrder */,
+				B9277E9327FD32570076D79F /* AddWish */,
+				B9277E9427FD32590076D79F /* GetWish */,
+				B9277E9F27FD338B0076D79F /* DeleteWish */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -676,6 +778,7 @@
 				B9B0788127F67FE0003E130D /* SmartCollectionViewCell.swift */,
 				B9B0788327F68592003E130D /* BestCollectionViewCell.swift */,
 				B9B0788527F6859B003E130D /* NewCollectionViewCell.swift */,
+				B9277EA527FD4F4F0076D79F /* WishListCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1015,6 +1118,9 @@
 			files = (
 				B9B0787427F6454F003E130D /* GetOrderRequest.swift in Sources */,
 				B9FBD24E27F486F300A4A895 /* AddCartViewController.swift in Sources */,
+				B9277EA427FD34740076D79F /* DeleteWishResponse.swift in Sources */,
+				B9277EB427FD995E0076D79F /* AddReviewViewController.swift in Sources */,
+				B9277EB027FD98C00076D79F /* AddReviewResponse.swift in Sources */,
 				B904905027F37E63000B514C /* AskViewController.swift in Sources */,
 				B9B0787E27F67DE1003E130D /* SaleViewController.swift in Sources */,
 				B909DC6427F0418500306CB1 /* CheckViewController.swift in Sources */,
@@ -1025,10 +1131,12 @@
 				B99F814727ED93C1002EC5E5 /* LogInResponse.swift in Sources */,
 				B97AB79A27F181A400CF72E1 /* BestViewController.swift in Sources */,
 				B9CE018927E88AA300D9671A /* SignUpViewController.swift in Sources */,
+				B9277E9727FD32FC0076D79F /* AddWishRequest.swift in Sources */,
 				B94A850527F3627800B53ABA /* CartCollectionViewCell.swift in Sources */,
 				B909DC6627F0419400306CB1 /* ModifyViewController.swift in Sources */,
 				B943507927E5E66F0079BE3D /* ViewController.swift in Sources */,
 				B94A850927F372FF00B53ABA /* DetailViewController.swift in Sources */,
+				B9277EA227FD346D0076D79F /* DeleteWishRequest.swift in Sources */,
 				B9FBD26A27F4F5D000A4A895 /* GetReviewResponse.swift in Sources */,
 				B9CE018B27E88AB100D9671A /* MyPageViewController.swift in Sources */,
 				B9FBD26C27F4F8C000A4A895 /* ReviewCollectionViewCell.swift in Sources */,
@@ -1038,6 +1146,8 @@
 				B9B0786627F60E4B003E130D /* UpdateCartResponse.swift in Sources */,
 				B9B0788627F6859B003E130D /* NewCollectionViewCell.swift in Sources */,
 				B9B0787627F64556003E130D /* GetOrderResponse.swift in Sources */,
+				B9277E9C27FD331D0076D79F /* GetWishRequest.swift in Sources */,
+				B9277EA827FD50BE0076D79F /* WishListViewController.swift in Sources */,
 				B94A850727F36AD100B53ABA /* CartViewController.swift in Sources */,
 				B943507527E5E66F0079BE3D /* AppDelegate.swift in Sources */,
 				B9FBD24327F46C6100A4A895 /* ItemInfoCollectionViewCell.swift in Sources */,
@@ -1055,13 +1165,16 @@
 				B94350A527E5F1CF0079BE3D /* MenuCell.swift in Sources */,
 				B9FBD25027F4881800A4A895 /* AddCartCollectionViewCell.swift in Sources */,
 				B904904E27F37E56000B514C /* ReviewViewController.swift in Sources */,
+				B9277EA627FD4F4F0076D79F /* WishListCollectionViewCell.swift in Sources */,
 				B9B0786427F60E42003E130D /* UpdateCartRequest.swift in Sources */,
 				B9B0785A27F5BC43003E130D /* DeleteCartRequest.swift in Sources */,
 				B9B0787C27F64803003E130D /* AddOrderDataManager.swift in Sources */,
 				B99F815027ED9EB6002EC5E5 /* IndicatorView.swift in Sources */,
+				B9277EB227FD99240076D79F /* AddReviewDataManager.swift in Sources */,
 				B99F814527ED93B4002EC5E5 /* LogInRequest.swift in Sources */,
 				B905D14F27F1A46B00164006 /* RandomResponse.swift in Sources */,
 				B9B0787227F64546003E130D /* AddOrderResponse.swift in Sources */,
+				B9277EAE27FD98B80076D79F /* AddReviewRequest.swift in Sources */,
 				B9B0787027F6453D003E130D /* AddOrderRequest.swift in Sources */,
 				B9B0787A27F64573003E130D /* AddOrderViewController.swift in Sources */,
 				B9B0786827F60FDA003E130D /* UpdateCartManager.swift in Sources */,
@@ -1081,11 +1194,14 @@
 				B9FBD27427F5186400A4A895 /* DeleteUserResponse.swift in Sources */,
 				B904904C27F37E48000B514C /* ItemInfoViewController.swift in Sources */,
 				B9FBD26827F4F5C600A4A895 /* GetReviewRequest.swift in Sources */,
+				B9277E9E27FD33240076D79F /* GetWishResponse.swift in Sources */,
 				B9FBD26E27F50F3B00A4A895 /* ReviewDetailViewController.swift in Sources */,
 				B9FBD25C27F4C3FB00A4A895 /* AddCartDataManager.swift in Sources */,
 				B9FBD26427F4F51200A4A895 /* SearchCollectionViewCell.swift in Sources */,
 				B97AB79827F1819B00CF72E1 /* NewViewController.swift in Sources */,
 				B9FBD27227F5185C00A4A895 /* DeleteUserRequest.swift in Sources */,
+				B9277EAA27FD584D0076D79F /* AddWishDataManager.swift in Sources */,
+				B9277E9927FD33050076D79F /* AddWishResponse.swift in Sources */,
 				B909DC6C27F041C600306CB1 /* ModifyResponse.swift in Sources */,
 				B943507727E5E66F0079BE3D /* SceneDelegate.swift in Sources */,
 				B909DC6027F03C8A00306CB1 /* CategoryViewController.swift in Sources */,

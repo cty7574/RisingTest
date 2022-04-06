@@ -49,9 +49,9 @@ class CartViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("view Will Appear!")
         let cr = GetCartRequest()
         cr.getCartData(delegate: self)
-        cartCV.reloadData()
     }
     
     @IBAction func orderBtnTabbed(_ sender: UIButton) {
@@ -65,6 +65,8 @@ class CartViewController: UIViewController {
                 }
                 index += 1
             }
+            
+            cartItems = []
             
             guard let ovc = self.storyboard?.instantiateViewController(withIdentifier: "AddOrderVC") as? AddOrderViewController else { return }
             
@@ -81,7 +83,6 @@ extension CartViewController{
     func didSuccessGetCart(_ response: [GetCartResult]){
         cartItems = response
         cartCV.reloadData()
-        
         for _ in 0...cartItems.count{
            checkBuy.append(false)
         }

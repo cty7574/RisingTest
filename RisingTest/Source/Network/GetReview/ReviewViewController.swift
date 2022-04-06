@@ -29,19 +29,40 @@ class ReviewViewController: UIViewController {
         
         reviewCV.dataSource = self
         reviewCV.delegate = self
+
+    }
+    
+
+    
+    override func viewWillAppear(_ animated: Bool) {
         
-        var rr = GetReviewRequest()
+        let rr = GetReviewRequest()
         
         if RecommendViewController.randomTarget != nil{
             randomItem = RecommendViewController.randomTarget!
+            
+            AddReviewViewController.itemTitle = randomItem!.title
+            AddReviewViewController.postId = randomItem!.item_list[0].item_id
+            
             rr.getReviewData(randomItem!.post_id, delegate: self)
         }
         else if RecommendViewController.saleTarget != nil{
             saleItem = RecommendViewController.saleTarget!
+            
+            AddReviewViewController.itemTitle = saleItem!.title
+            AddReviewViewController.postId = saleItem!.post_id
+            
             rr.getReviewData(saleItem!.post_id, delegate: self)
         }
     }
 
+    @IBAction func AddReviewBtnTabbed(_ sender: UIButton) {
+        
+        guard let avc = self.storyboard?.instantiateViewController(withIdentifier: "AddReviewVC") as? AddReviewViewController else { return }
+        
+        self.navigationController?.pushViewController(avc, animated: true)
+        
+    }
 }
 
 extension ReviewViewController{
