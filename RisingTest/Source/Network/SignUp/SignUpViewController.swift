@@ -130,7 +130,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         
-        
+        //
         guard let id = idTextField.text, id.isExists else{
             self.presentAlert(title: "아이디를 입력해주세요")
             return
